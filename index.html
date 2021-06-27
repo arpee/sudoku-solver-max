@@ -4,7 +4,7 @@
 <head>
     <title>Simple Sudoko Solver</title>
     <meta charset="utf-8">
-    <script type="text/javascript" src="code.js"></script>
+    
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -12,89 +12,90 @@
 <body>
 
     <div class="grid">
-        <input type="number" id="1" class="A a 1" min="1" max="9">
-        <input type="number" id="2" class="A a 2" min="1" max="9">
-        <input type="number" id="3" class="A a 3" min="1" max="9">
-        <input type="number" id="4" class="B  a 4" min="1" max="9">
-        <input type="number" id="5" class="B a 5" min="1" max="9">
-        <input type="number" id="6" class="B a 6" min="1" max="9">
-        <input type="number" id="7" class="C a 7" min="1" max="9">
-        <input type="number" id="8" class="C a 8" min="1" max="9">
-        <input type="number" id="9" class="C a 9" min="1" max="9">
-        <input type="number" id="10" class="A b 1" min="1" max="9">
-        <input type="number" id="11" class="A b 2" min="1" max="9">
-        <input type="number" id="12" class="A b 3" min="1" max="9">
-        <input type="number" id="13" class="B  b 4" min="1" max="9">
-        <input type="number" id="14" class="B b 5" min="1" max="9">
-        <input type="number" id="15" class="B b 6" min="1" max="9">
-        <input type="number" id="16" class="C b 7" min="1" max="9">
-        <input type="number" id="17" class="C b 8" min="1" max="9">
-        <input type="number" id="18" class="C b 9" min="1" max="9">
-        <input type="number" id="19" class="A c 1" min="1" max="9">
-        <input type="number" id="20" class="A c 2" min="1" max="9">
-        <input type="number" id="21" class="A c 3" min="1" max="9">
-        <input type="number" id="22" class="B  c 4" min="1" max="9">
-        <input type="number" id="23" class="B c 5" min="1" max="9">
-        <input type="number" id="24" class="B c 6" min="1" max="9">
-        <input type="number" id="25" class="C c 7" min="1" max="9">
-        <input type="number" id="26" class="C c 8" min="1" max="9">
-        <input type="number" id="27" class="C c 9" min="1" max="9">
-        <input type="number" id="28" class="D d 1" min="1" max="9">
-        <input type="number" id="29" class="D d 2" min="1" max="9">
-        <input type="number" id="30" class="D d 3" min="1" max="9">
-        <input type="number" id="31" class="E d 4" min="1" max="9">
-        <input type="number" id="32" class="E d 5" min="1" max="9">
-        <input type="number" id="33" class="E d 6" min="1" max="9">
-        <input type="number" id="34" class="F d 7" min="1" max="9">
-        <input type="number" id="35" class="F d 8" min="1" max="9">
-        <input type="number" id="36" class="F d 9" min="1" max="9">
-        <input type="number" id="37" class="D e 1" min="1" max="9">
-        <input type="number" id="38" class="D e 2" min="1" max="9">
-        <input type="number" id="39" class="D e 3" min="1" max="9">
-        <input type="number" id="40" class="E e 4" min="1" max="9">
-        <input type="number" id="41" class="E e 5" min="1" max="9">
-        <input type="number" id="42" class="E e 6" min="1" max="9">
-        <input type="number" id="43" class="F e 7" min="1" max="9">
-        <input type="number" id="44" class="F e 8" min="1" max="9">
-        <input type="number" id="45" class="F e 9" min="1" max="9">
-        <input type="number" id="46" class="D f 1" min="1" max="9">
-        <input type="number" id="47" class="D f 2" min="1" max="9">
-        <input type="number" id="48" class="D f 3" min="1" max="9">
-        <input type="number" id="49" class="E f 4" min="1" max="9">
-        <input type="number" id="50" class="E f 5" min="1" max="9">
-        <input type="number" id="51" class="E f 6" min="1" max="9">
-        <input type="number" id="52" class="F f 7" min="1" max="9">
-        <input type="number" id="53" class="F f 8" min="1" max="9">
-        <input type="number" id="54" class="F f 9" min="1" max="9">
-        <input type="number" id="55" class="G g 1" min="1" max="9">
-        <input type="number" id="56" class="G g 2" min="1" max="9">
-        <input type="number" id="57" class="G g 3" min="1" max="9">
-        <input type="number" id="58" class="H g 4" min="1" max="9">
-        <input type="number" id="59" class="H g 5" min="1" max="9">
-        <input type="number" id="60" class="H g 6" min="1" max="9">
-        <input type="number" id="61" class="I g 7" min="1" max="9">
-        <input type="number" id="62" class="I g 8" min="1" max="9">
-        <input type="number" id="63" class="I g 9" min="1" max="9">
-        <input type="number" id="64" class="G h 1" min="1" max="9">
-        <input type="number" id="65" class="G h 2" min="1" max="9">
-        <input type="number" id="66" class="G h 3" min="1" max="9">
-        <input type="number" id="67" class="H h 4" min="1" max="9">
-        <input type="number" id="68" class="H h 5" min="1" max="9">
-        <input type="number" id="69" class="H h 6" min="1" max="9">
-        <input type="number" id="70" class="I h 7" min="1" max="9">
-        <input type="number" id="71" class="I h 8" min="1" max="9">
-        <input type="number" id="72" class="I h 9" min="1" max="9">
-        <input type="number" id="73" class="G i 1" min="1" max="9">
-        <input type="number" id="74" class="G i 2" min="1" max="9">
-        <input type="number" id="75" class="G i 3" min="1" max="9">
-        <input type="number" id="76" class="H i 4" min="1" max="9">
-        <input type="number" id="77" class="H i 5" min="1" max="9">
-        <input type="number" id="78" class="H i 6" min="1" max="9">
-        <input type="number" id="79" class="I i 7" min="1" max="9">
-        <input type="number" id="80" class="I i 8" min="1" max="9">
-        <input type="number" id="81" class="I i 9" min="1" max="9">
+        <input type="number" id="1" class="BA Ra C1" min="1" max="9">
+        <input type="number" id="2" class="BA Ra C2" min="1" max="9">
+        <input type="number" id="3" class="BA Ra C3" min="1" max="9">
+        <input type="number" id="4" class="BB  Ra C4" min="1" max="9">
+        <input type="number" id="5" class="BB Ra C5" min="1" max="9">
+        <input type="number" id="6" class="BB Ra C6" min="1" max="9">
+        <input type="number" id="7" class="BC Ra C7" min="1" max="9">
+        <input type="number" id="8" class="BC Ra C8" min="1" max="9">
+        <input type="number" id="9" class="BC Ra C9" min="1" max="9">
+        <input type="number" id="10" class="BA Rb C1" min="1" max="9">
+        <input type="number" id="11" class="BA Rb C2" min="1" max="9">
+        <input type="number" id="12" class="BA Rb C3" min="1" max="9">
+        <input type="number" id="13" class="BB  Rb C4" min="1" max="9">
+        <input type="number" id="14" class="BB Rb C5" min="1" max="9">
+        <input type="number" id="15" class="BB Rb C6" min="1" max="9">
+        <input type="number" id="16" class="BC Rb C7" min="1" max="9">
+        <input type="number" id="17" class="BC Rb C8" min="1" max="9">
+        <input type="number" id="18" class="BC Rb C9" min="1" max="9">
+        <input type="number" id="19" class="BA Rc C1" min="1" max="9">
+        <input type="number" id="20" class="BA Rc C2" min="1" max="9">
+        <input type="number" id="21" class="BA Rc C3" min="1" max="9">
+        <input type="number" id="22" class="BB  Rc C4" min="1" max="9">
+        <input type="number" id="23" class="BB Rc C5" min="1" max="9">
+        <input type="number" id="24" class="BB Rc C6" min="1" max="9">
+        <input type="number" id="25" class="BC Rc C7" min="1" max="9">
+        <input type="number" id="26" class="BC Rc C8" min="1" max="9">
+        <input type="number" id="27" class="BC Rc C9" min="1" max="9">
+        <input type="number" id="28" class="BD Rd C1" min="1" max="9">
+        <input type="number" id="29" class="BD Rd C2" min="1" max="9">
+        <input type="number" id="30" class="BD Rd C3" min="1" max="9">
+        <input type="number" id="31" class="BE Rd C4" min="1" max="9">
+        <input type="number" id="32" class="BE Rd C5" min="1" max="9">
+        <input type="number" id="33" class="BE Rd C6" min="1" max="9">
+        <input type="number" id="34" class="BF Rd C7" min="1" max="9">
+        <input type="number" id="35" class="BF Rd C8" min="1" max="9">
+        <input type="number" id="36" class="BF Rd C9" min="1" max="9">
+        <input type="number" id="37" class="BD Re C1" min="1" max="9">
+        <input type="number" id="38" class="BD Re C2" min="1" max="9">
+        <input type="number" id="39" class="BD Re C3" min="1" max="9">
+        <input type="number" id="40" class="BE Re C4" min="1" max="9">
+        <input type="number" id="41" class="BE Re C5" min="1" max="9">
+        <input type="number" id="42" class="BE Re C6" min="1" max="9">
+        <input type="number" id="43" class="BF Re C7" min="1" max="9">
+        <input type="number" id="44" class="BF Re C8" min="1" max="9">
+        <input type="number" id="45" class="BF Re C9" min="1" max="9">
+        <input type="number" id="46" class="BD Rf C1" min="1" max="9">
+        <input type="number" id="47" class="BD Rf C2" min="1" max="9">
+        <input type="number" id="48" class="BD Rf C3" min="1" max="9">
+        <input type="number" id="49" class="BE Rf C4" min="1" max="9">
+        <input type="number" id="50" class="BE Rf C5" min="1" max="9">
+        <input type="number" id="51" class="BE Rf C6" min="1" max="9">
+        <input type="number" id="52" class="BF Rf C7" min="1" max="9">
+        <input type="number" id="53" class="BF Rf C8" min="1" max="9">
+        <input type="number" id="54" class="BF Rf C9" min="1" max="9">
+        <input type="number" id="55" class="BG Rg C1" min="1" max="9">
+        <input type="number" id="56" class="BG Rg C2" min="1" max="9">
+        <input type="number" id="57" class="BG Rg C3" min="1" max="9">
+        <input type="number" id="58" class="BH Rg C4" min="1" max="9">
+        <input type="number" id="59" class="BH Rg C5" min="1" max="9">
+        <input type="number" id="60" class="BH Rg C6" min="1" max="9">
+        <input type="number" id="61" class="BI Rg C7" min="1" max="9">
+        <input type="number" id="62" class="BI Rg C8" min="1" max="9">
+        <input type="number" id="63" class="BI Rg C9" min="1" max="9">
+        <input type="number" id="64" class="BG Rh C1" min="1" max="9">
+        <input type="number" id="65" class="BG Rh C2" min="1" max="9">
+        <input type="number" id="66" class="BG Rh C3" min="1" max="9">
+        <input type="number" id="67" class="BH Rh C4" min="1" max="9">
+        <input type="number" id="68" class="BH Rh C5" min="1" max="9">
+        <input type="number" id="69" class="BH Rh C6" min="1" max="9">
+        <input type="number" id="70" class="BI Rh C7" min="1" max="9">
+        <input type="number" id="71" class="BI Rh C8" min="1" max="9">
+        <input type="number" id="72" class="BI Rh C9" min="1" max="9">
+        <input type="number" id="73" class="BG Ri C1" min="1" max="9">
+        <input type="number" id="74" class="BG Ri C2" min="1" max="9">
+        <input type="number" id="75" class="BG Ri C3" min="1" max="9">
+        <input type="number" id="76" class="BH Ri C4" min="1" max="9">
+        <input type="number" id="77" class="BH Ri C5" min="1" max="9">
+        <input type="number" id="78" class="BH Ri C6" min="1" max="9">
+        <input type="number" id="79" class="BI Ri C7" min="1" max="9">
+        <input type="number" id="80" class="BI Ri C8" min="1" max="9">
+        <input type="number" id="81" class="BI Ri C9" min="1" max="9">
     </div>
-
+    <button id="set" name="set">Set</button>
+    <script type="text/javascript" src="code.js"></script>
 </body>
 
 </html>
