@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Simple Sudoko Solver</title>
     <meta charset="utf-8">
@@ -7,8 +8,93 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
-  
+    <div class="grid">
+        <input type="number" id="1" class="A a 1" min="1" max="9">
+        <input type="number" id="2" class="A a 2" min="1" max="9">
+        <input type="number" id="3" class="A a 3" min="1" max="9">
+        <input type="number" id="4" class="B  a 4" min="1" max="9">
+        <input type="number" id="5" class="B a 5" min="1" max="9">
+        <input type="number" id="6" class="B a 6" min="1" max="9">
+        <input type="number" id="7" class="C a 7" min="1" max="9">
+        <input type="number" id="8" class="C a 8" min="1" max="9">
+        <input type="number" id="9" class="C a 9" min="1" max="9">
+        <input type="number" id="10" class="A b 1" min="1" max="9">
+        <input type="number" id="11" class="A b 2" min="1" max="9">
+        <input type="number" id="12" class="A b 3" min="1" max="9">
+        <input type="number" id="13" class="B  b 4" min="1" max="9">
+        <input type="number" id="14" class="B b 5" min="1" max="9">
+        <input type="number" id="15" class="B b 6" min="1" max="9">
+        <input type="number" id="16" class="C b 7" min="1" max="9">
+        <input type="number" id="17" class="C b 8" min="1" max="9">
+        <input type="number" id="18" class="C b 9" min="1" max="9">
+        <input type="number" id="19" class="A c 1" min="1" max="9">
+        <input type="number" id="20" class="A c 2" min="1" max="9">
+        <input type="number" id="21" class="A c 3" min="1" max="9">
+        <input type="number" id="22" class="B  c 4" min="1" max="9">
+        <input type="number" id="23" class="B c 5" min="1" max="9">
+        <input type="number" id="24" class="B c 6" min="1" max="9">
+        <input type="number" id="25" class="C c 7" min="1" max="9">
+        <input type="number" id="26" class="C c 8" min="1" max="9">
+        <input type="number" id="27" class="C c 9" min="1" max="9">
+        <input type="number" id="28" class="D d 1" min="1" max="9">
+        <input type="number" id="29" class="D d 2" min="1" max="9">
+        <input type="number" id="30" class="D d 3" min="1" max="9">
+        <input type="number" id="31" class="E d 4" min="1" max="9">
+        <input type="number" id="32" class="E d 5" min="1" max="9">
+        <input type="number" id="33" class="E d 6" min="1" max="9">
+        <input type="number" id="34" class="F d 7" min="1" max="9">
+        <input type="number" id="35" class="F d 8" min="1" max="9">
+        <input type="number" id="36" class="F d 9" min="1" max="9">
+        <input type="number" id="37" class="D e 1" min="1" max="9">
+        <input type="number" id="38" class="D e 2" min="1" max="9">
+        <input type="number" id="39" class="D e 3" min="1" max="9">
+        <input type="number" id="40" class="E e 4" min="1" max="9">
+        <input type="number" id="41" class="E e 5" min="1" max="9">
+        <input type="number" id="42" class="E e 6" min="1" max="9">
+        <input type="number" id="43" class="F e 7" min="1" max="9">
+        <input type="number" id="44" class="F e 8" min="1" max="9">
+        <input type="number" id="45" class="F e 9" min="1" max="9">
+        <input type="number" id="46" class="D f 1" min="1" max="9">
+        <input type="number" id="47" class="D f 2" min="1" max="9">
+        <input type="number" id="48" class="D f 3" min="1" max="9">
+        <input type="number" id="49" class="E f 4" min="1" max="9">
+        <input type="number" id="50" class="E f 5" min="1" max="9">
+        <input type="number" id="51" class="E f 6" min="1" max="9">
+        <input type="number" id="52" class="F f 7" min="1" max="9">
+        <input type="number" id="53" class="F f 8" min="1" max="9">
+        <input type="number" id="54" class="F f 9" min="1" max="9">
+        <input type="number" id="55" class="G g 1" min="1" max="9">
+        <input type="number" id="56" class="G g 2" min="1" max="9">
+        <input type="number" id="57" class="G g 3" min="1" max="9">
+        <input type="number" id="58" class="H g 4" min="1" max="9">
+        <input type="number" id="59" class="H g 5" min="1" max="9">
+        <input type="number" id="60" class="H g 6" min="1" max="9">
+        <input type="number" id="61" class="I g 7" min="1" max="9">
+        <input type="number" id="62" class="I g 8" min="1" max="9">
+        <input type="number" id="63" class="I g 9" min="1" max="9">
+        <input type="number" id="64" class="G h 1" min="1" max="9">
+        <input type="number" id="65" class="G h 2" min="1" max="9">
+        <input type="number" id="66" class="G h 3" min="1" max="9">
+        <input type="number" id="67" class="H h 4" min="1" max="9">
+        <input type="number" id="68" class="H h 5" min="1" max="9">
+        <input type="number" id="69" class="H h 6" min="1" max="9">
+        <input type="number" id="70" class="I h 7" min="1" max="9">
+        <input type="number" id="71" class="I h 8" min="1" max="9">
+        <input type="number" id="72" class="I h 9" min="1" max="9">
+        <input type="number" id="73" class="G i 1" min="1" max="9">
+        <input type="number" id="74" class="G i 2" min="1" max="9">
+        <input type="number" id="75" class="G i 3" min="1" max="9">
+        <input type="number" id="76" class="H i 4" min="1" max="9">
+        <input type="number" id="77" class="H i 5" min="1" max="9">
+        <input type="number" id="78" class="H i 6" min="1" max="9">
+        <input type="number" id="79" class="I i 7" min="1" max="9">
+        <input type="number" id="80" class="I i 8" min="1" max="9">
+        <input type="number" id="81" class="I i 9" min="1" max="9">
+    </div>
+
 </body>
+
 </html>
