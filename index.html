@@ -4,13 +4,14 @@
 <head>
     <title>Simple Sudoko Solver</title>
     <meta charset="utf-8">
-    
+
     <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-
+  <div class="gridbox">
+    <div class="announce">Set the solver a challenge!</div>
     <div class="grid">
         <input type="number" id="1" class="BA Ra C1" min="1" max="9">
         <input type="number" id="2" class="BA Ra C2" min="1" max="9">
@@ -94,7 +95,13 @@
         <input type="number" id="80" class="BI Ri C8" min="1" max="9">
         <input type="number" id="81" class="BI Ri C9" min="1" max="9">
     </div>
+  </div>
+    <div id="delaybox">
+        Delay: <input type="number" id="delay" min="0" max="1000" value=10>
+    </div>
     <button id="set" name="set">Set</button>
+    <button id="solve" name="solve" disabled>Solve</button>
+    <button id="reset" name="reset" style="display:none;">Reset</button>
     <script type="text/javascript" src="code.js"></script>
 </body>
 

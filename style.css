@@ -1,10 +1,15 @@
 body {
     background-color: #444;
+    color: #eee;
+    font-family: work-sans, sans-serif, sans-serif;
+    font-size: 23px;
 }
 
-.grid {
-    width: 450px;
+.gridbox {
     margin: 15vw auto 0;
+    width: 450px;
+}
+.grid {
     display: grid;
     grid-template-columns: repeat(9, 50px);
 }
@@ -27,7 +32,12 @@ input[type="number"] {
     border: 1px solid #555;
 }
 
-#set {
+.announce {
+    text-align: center;
+    margin: 1em auto;
+}
+
+#set, #solve, #reset, #delaybox {
     width: 250px;
     height: 50px;
     margin: 2em auto;
