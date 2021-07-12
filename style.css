@@ -2,7 +2,6 @@ body {
     background-color: #444;
     color: #eee;
     font-family: work-sans, sans-serif, sans-serif;
-    font-size: 23px;
 }
 
 .gridbox {
@@ -35,13 +34,20 @@ input[type="number"] {
 .announce {
     text-align: center;
     margin: 1em auto;
+    font-size: 28px;
 }
 
 #set, #solve, #reset, #delaybox {
-    width: 250px;
+    width: 450px;
     height: 50px;
-    margin: 2em auto;
+    margin: 1em auto;
     display: block;
+    font-size: 24px;
+}
+
+#delaybox {
+    text-align: right;
+    font-size: 1em;
 }
 
 .C3, .C6 {
