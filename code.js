@@ -81,6 +81,7 @@ function fwd(sq) {
         console.log(true);
         if (trysq == 81) {
             console.log("Success!");
+            document.querySelector(".announce").innerHTML = "Success!";
             document.getElementById("reset").style.display = "block";
             document.getElementById("set").style.display = "none";
             document.getElementById("solve").style.display = "none";
@@ -133,6 +134,7 @@ function bk(sq) {
         }
         if (trysq == 1) {
             console.log("Unsolveable");
+            document.querySelector(".announce").innerHTML = "Unsolveable!";
         } else {
             setTimeout(() => {
                 bk(trysq);
