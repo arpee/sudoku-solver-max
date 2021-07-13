@@ -57,6 +57,7 @@ document.getElementById('reset').addEventListener('click', () => {
 
 
 function solve() {
+    delay = document.getElementById("delay").value;
     var sq = 0;
     fwd(sq);
 }
